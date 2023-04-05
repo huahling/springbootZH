@@ -1,7 +1,7 @@
 package comyz.controller;
 
 
-import comyz.entities.Gs;
+//import comyz.entities.Gs;
 import comyz.entities.User;
 import comyz.service.Userservice;
 import org.apache.poi.hssf.usermodel.HSSFDateUtil;
@@ -81,7 +81,7 @@ public class Userhandlers {
 		int pagesize1 = Integer.valueOf(pagesize);
 		int pageno1=  Integer.valueOf(pageno);
 
-		System.out.println("====="+userservice.qusid());
+//		System.out.println("====="+userservice.qusid());
 		userservice.delete(id);
 
 		return "redirect:/query"+"?pageno="+pageno1+"&pagesize="+pagesize1;
@@ -234,12 +234,12 @@ public class Userhandlers {
 
 		map.put("xingbei", xingbei);
 
-		List<Gs> li = userservice.qugs();
+//		List<Gs> li = userservice.qugs();
 
 //		li.add();
 
 //		System.out.println(li+"----------------");
-		map.put("yg", li);
+//		map.put("yg", li);
 
 		map.put("user", new User());
 		System.out.println("����get");
@@ -264,10 +264,9 @@ public class Userhandlers {
 			xingbei.put("1", messageSource.getMessage("td.nv", null, locale));
 			map.put("xingbei", xingbei);
 
-			List<Gs> li = userservice.qugs();
+//			List<Gs> li = userservice.qugs();
 
-
-			map.put("yg", li);
+//			map.put("yg", li);
 			return "add";
 		}
 
@@ -321,10 +320,10 @@ public class Userhandlers {
 		xingbei.put("1", messageSource.getMessage("td.nv", null, locale));
 		map.put("xingbei", xingbei);
 
-		List<Gs> li = userservice.qugs();
+//		List<Gs> li = userservice.qugs();
 
 		System.out.println("�޸�get");
-		map.put("yg", li);
+//		map.put("yg", li);
 
 		return "add";
 	}
@@ -345,9 +344,9 @@ public class Userhandlers {
 			xingbei.put("1", messageSource.getMessage("td.nv", null, locale));
 			map.put("xingbei", xingbei);
 
-			List<Gs> li = userservice.qugs();
+//			List<Gs> li = userservice.qugs();
 
-			map.put("yg", li);
+//			map.put("yg", li);
 
 			System.out.println("�޸�");
 			return "add";
@@ -530,7 +529,7 @@ public class Userhandlers {
 //						User user =new User();
 
 						User user =new User();
-						Gs gs=new Gs();
+//						Gs gs=new Gs();
 
 						user.setHand(getCellValue(cell2));
 						user.setName(getCellValue(cell3));
@@ -541,8 +540,8 @@ public class Userhandlers {
 						Date setupTime = HSSFDateUtil.getJavaDate(Double.parseDouble(getCellValue(cell7)));
 						user.setBirth(setupTime);
 
-						gs.setSid(Integer.valueOf(getCellValue(cell8)));
-						user.setGs(gs);
+//						gs.setSid(Integer.valueOf(getCellValue(cell8)));
+//						user.setGs(gs);
 
 //						user.setGs_id(Integer.valueOf(getCellValue(cell8)));
 //						System.out.println(user);
@@ -598,7 +597,7 @@ public class Userhandlers {
 						XSSFCell cell8=row.getCell(6);
 
 						User user =new User();
-						Gs gs=new Gs();
+//						Gs gs=new Gs();
 
 						user.setHand(getCellValue(cell2));
 						user.setName(getCellValue(cell3));
@@ -609,8 +608,8 @@ public class Userhandlers {
 						Date setupTime = HSSFDateUtil.getJavaDate(Double.parseDouble(getCellValue(cell7)));
 						user.setBirth(setupTime);
 
-						gs.setSid(Integer.valueOf(getCellValue(cell8)));
-						user.setGs(gs);
+//						gs.setSid(Integer.valueOf(getCellValue(cell8)));
+//						user.setGs(gs);
 
 
 //						System.out.println(user);
@@ -741,7 +740,7 @@ public class Userhandlers {
 //		cell00.setCellValue("password");
 //		cell00.setCellValue("yuangong");
 			User bo = list.get(i);
-			Gs gs=new Gs();
+//			Gs gs=new Gs();
 
 			cell10.setCellValue(bo.getId());
 			cell11.setCellValue(bo.getHand());
@@ -751,7 +750,7 @@ public class Userhandlers {
 			cell55.setCellValue(bo.getPassword());
 			cell66.setCellValue(bo.getBirth());
 
-			cell77.setCellValue(bo.getGs().getSid());
+//			cell77.setCellValue(bo.getGs().getSid());
 
 		}
 

@@ -1,7 +1,7 @@
 package springbootzh;
 
 //import comyz.config.DBConfig1;
-import comyz.config.DBConfig1;
+//import comyz.config.DBConfig1;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -18,7 +18,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 @ComponentScan(basePackages = {"comyz","springbootzh"})//"demo.feng",demo.shujuyuan
 @MapperScan(basePackages ={"comyz.dao"}) //mybatis  //"demo.feng",
 //@EntityScan("comyz.entities")
-@EnableConfigurationProperties(value = { DBConfig1.class})
+//@EnableConfigurationProperties(value = { DBConfig1.class})
 
 @EnableCaching
 @EnableScheduling

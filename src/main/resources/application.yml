@@ -1,7 +1,10 @@
 
-
 spring:
 
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
   #  servlet:
   #    multipart:
   #      enabled: true
@@ -9,19 +12,32 @@ spring:
   #      max-file-size: 10MB #??????????
 
 
-#  thymeleaf:
-#    suffix: .html
   messages:
     basename: i18n/messages
     encoding: UTF-8
 
 
+
+  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://192.168.31.141:3306/test?useSSL=false&serverTimezone=UTC
+
+
+  #    test1:
+  #      jdbcUrl: jdbc:mysql://192.168.31.141:3306/test?useSSL=false&serverTimezone=UTC
+  #      username: root
+  #      password: 123456
+
+  #  thymeleaf:
+#    suffix: .html
+
+
   mvc:
-    hiddenmethod:
-      filter:
-        enabled: true
-
-
+#    hiddenmethod:
+#      filter:
+#        enabled: true
     view:
       prefix: /WEB-INF/jsp/
       suffix: .jsp
@@ -50,17 +66,19 @@ spring:
   #      prefix: /WEB-INF/jsp/
   #      suffix: .jsp
 
-  datasource:
+#  datasource:
+
 #    url: jdbc:mysql://localhost:3306/test?useSSL=false&serverTimezone=UTC
 #    username: root
 #    password: 123456
 #    driver-class-name: com.mysql.cj.jdbc.Driver
 
-    test1:
-      jdbcUrl: jdbc:mysql://localhost:3306/test?useSSL=false&serverTimezone=UTC
-      username: root
-      password: 123456
+#    test1:
+#      jdbcUrl: jdbc:mysql://192.168.31.141:3306/test?useSSL=false&serverTimezone=UTC
+#      username: root
+#      password: 123456
     #      driverClassName: com.mysql.cj.jdbc.Driver
+
 #    test2:
 #      jdbcUrl: jdbc:mysql://localhost:3306/testb?useSSL=false&serverTimezone=UTC
 #      username: root

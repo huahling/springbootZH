@@ -3,23 +3,11 @@ package comyz.entities;
 
 import java.util.Date;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-import javax.validation.constraints.Past;
+import javax.persistence.*;
 
-
-import com.fasterxml.jackson.annotation.JsonFormat;
-import org.hibernate.validator.constraints.Length;
-import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.format.annotation.NumberFormat;
 
-
+import javax.validation.constraints.NotEmpty;
 //@Cacheable(true)
 @Entity
 @Table(name="us")
@@ -48,7 +36,7 @@ public class User {
 	@NotEmpty
 	private String password;
 
-	private Gs gs;
+//	private Gs gs;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -130,15 +118,15 @@ public class User {
 
 
 
-	@JoinColumn(name ="gs_id",insertable = false,updatable = false)
-	@ManyToOne
-	public Gs getGs() {
-		return gs;
-	}
-
-	public void setGs(Gs gs) {
-		this.gs = gs;
-	}
+//	@JoinColumn(name ="gs_id",insertable = false,updatable = false)
+//	@ManyToOne
+//	public Gs getGs() {
+//		return gs;
+//	}
+//
+//	public void setGs(Gs gs) {
+//		this.gs = gs;
+//	}
 
 	@Override
 	public String toString() {
@@ -151,7 +139,6 @@ public class User {
 				", birth=" + birth +
 				", hand='" + hand + '\'' +
 				", password='" + password + '\'' +
-				", gs=" + gs +
 				'}';
 	}
 }

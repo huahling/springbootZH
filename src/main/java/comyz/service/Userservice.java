@@ -1,8 +1,8 @@
 package comyz.service;
 
-import comyz.dao.GsDao;
+
 import comyz.dao.UserDao;
-import comyz.entities.Gs;
+
 import comyz.entities.User;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,22 +19,22 @@ public class Userservice {
 	@Autowired
 	private UserDao userdao;
 
-	@Autowired
-	private GsDao gsdao;
+//	@Autowired
+//	private GsDao gsdao;
 
-	public List<Gs> qugs() {
-		return gsdao.qugs();
-	}
-
-	public List<Gs> qugsfeng(int pageno,int pagesize) {
-		return gsdao.qugsfenye(pageno,pagesize);
-	}
-
-
-
-	public Gs quidgs(int sid) {
-		return gsdao.quidgs(sid);
-	}
+//	public List<Gs> qugs() {
+//		return gsdao.qugs();
+//	}
+//
+//	public List<Gs> qugsfeng(int pageno,int pagesize) {
+//		return gsdao.qugsfenye(pageno,pagesize);
+//	}
+//
+//
+//
+//	public Gs quidgs(int sid) {
+//		return gsdao.quidgs(sid);
+//	}
 
 	//	@Transactional
 	public void delete(int id) {
@@ -93,10 +93,10 @@ public class Userservice {
 		return userdao.count(pagesize,pageno);
 	}
 
-	public int countsgs(int pagesize) {
-
-		return gsdao.countsgs(pagesize);
-	}
+//	public int countsgs(int pagesize) {
+//
+//		return gsdao.countsgs(pagesize);
+//	}
 
 
 //	public int coungs(int pagesize, int pageno) {
@@ -104,26 +104,26 @@ public class Userservice {
 //		return gsdao.coungs(pagesize,pageno);
 //	}
 
-	public void addgss(Gs gs) {
-		gsdao.addgs(gs);
-	}
-
-	public void updateGss(Gs gs) {
-		gsdao.updateGs(gs);
-	}
-
-
-	public void deletegs(int sid) {
-		gsdao.delete(sid);
-	}
-
-	public List<User> qusid() {
-		return userdao.querygs_id();
-	}
-
-	public List<Integer> pdd() {
-		return gsdao.pdd();
-	}
+//	public void addgss(Gs gs) {
+//		gsdao.addgs(gs);
+//	}
+//
+//	public void updateGss(Gs gs) {
+//		gsdao.updateGs(gs);
+//	}
+//
+//
+//	public void deletegs(int sid) {
+//		gsdao.delete(sid);
+//	}
+//
+//	public List<User> qusid() {
+//		return userdao.querygs_id();
+//	}
+//
+//	public List<Integer> pdd() {
+//		return gsdao.pdd();
+//	}
 
 
 }

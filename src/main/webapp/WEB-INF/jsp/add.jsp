@@ -37,22 +37,22 @@
 	<c:if test="${user.id != 0}">
 		<form:hidden path="id" />
 
-		<fmt:message key="td.hand"></fmt:message>:<input type="file" name="hd" /><br><br>
-		<fmt:message key="td.yong"></fmt:message>:<form:select path="gs_id"
-															   items="${yg}" itemLabel="yuangong" itemValue="sid"></form:select>
+<%--		<fmt:message key="td.hand"></fmt:message>:<input type="file" name="hd" /><br><br>--%>
+<%--		<fmt:message key="td.yong"></fmt:message>:<form:select path="gs_id"--%>
+<%--															   items="${yg}" itemLabel="yuangong" itemValue="sid"></form:select>--%>
 
-		<form:errors path="gs.yuangong"></form:errors>
+<%--		<form:errors path="gs.yuangong"></form:errors>--%>
 		<br>
 		<input type="hidden" name="_method" value="PUT">
 	</c:if>
 
 	<c:if test="${user.id == 0}">
-		<fmt:message key="td.hand"></fmt:message>:<input type="file" name="hd" /><br><br>
+<%--		<fmt:message key="td.hand"></fmt:message>:<input type="file" name="hd" /><br><br>--%>
 		<fmt:message key="td.password"></fmt:message>:<form:input
 			path="password" /><form:errors path="password"></form:errors>
 		<br>
-		<fmt:message key="td.yong"></fmt:message>:<form:select path="gs.sid"
-															   items="${yg}" itemLabel="yuangong" itemValue="sid"></form:select>
+<%--		<fmt:message key="td.yong"></fmt:message>:<form:select path="gs.sid"--%>
+<%--															   items="${yg}" itemLabel="yuangong" itemValue="sid"></form:select>--%>
 
 		<br>
 	</c:if>

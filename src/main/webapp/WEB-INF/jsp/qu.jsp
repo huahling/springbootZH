@@ -160,7 +160,7 @@
 <table border="1" cellpadding="10" cellspacing="0">
 	<tr>
 		<td><fmt:message key="td.id"></fmt:message></td>
-		<td><fmt:message key="td.hand"/></td>
+<%--		<td><fmt:message key="td.hand"/></td>--%>
 		<td><fmt:message key="td.name"></fmt:message></td>
 
 		<td><fmt:message key="td.sex">
@@ -171,7 +171,7 @@
 		<td><fmt:message key="td.addr"></fmt:message></td>
 		<td><fmt:message key="td.password"></fmt:message></td>
 		<%--<td><fmt:message key="td.gs_id"></fmt:message></td>--%>
-		<td><fmt:message key="td.yong"></fmt:message></td>
+<%--		<td><fmt:message key="td.yong"></fmt:message></td>--%>
 		<td><fmt:message key="td.birth"></fmt:message></td>
 		<td><fmt:message key="td.sangyu"/></td>
 		<td><fmt:message key="td.xiu"/></td>
@@ -184,14 +184,14 @@
 	<c:forEach items="${requestScope.querys}" var="emp">
 		<tr>
 			<td>${emp.id}</td>
-			<c:set var="chuangs" scope="request" value="${emp.hand}" ></c:set>
-			<td><img alt="" src="testxia?path=<%=java.net.URLEncoder.encode(request.getAttribute("chuangs") == ""?null:String.valueOf(request.getAttribute("chuangs")))%>" width="50" height="50"></td>
+<%--			<c:set var="chuangs" scope="request" value="${emp.hand}" ></c:set>--%>
+<%--			<td><img alt="" src="testxia?path=<%=java.net.URLEncoder.encode(request.getAttribute("chuangs") == ""?null:String.valueOf(request.getAttribute("chuangs")))%>" width="50" height="50"></td>--%>
 			<td>${emp.name}</td>
 			<td>${emp.sex == 0? '男' : '女' }</td>
 			<td>${emp.addr}</td>
 			<td>${emp.password}</td>
 				<%--<td>${emp.gs_id}</td>--%>
-			<td>${emp.gs.yuangong}</td>
+<%--			<td>${emp.gs.yuangong}</td>--%>
 			<td><fmt:formatDate value="${emp.birth}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
 			<td><a class="delete" href="emp/${emp.id}"><fmt:message key="td.sang"/></a></td>
 			<td><a href="emp/${emp.id}"><fmt:message key="td.xiu"/></a></td>

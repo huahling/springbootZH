@@ -323,20 +323,50 @@
         </plugins>
 
         <resources>
+
             <resource>
-                <directory>src/main/</directory>
+                <directory>src/main/java</directory>
                 <includes>
+                    <include>**/*.yml</include>
+                    <include>**/*.properties</include>
                     <include>**/*.xml</include>
                 </includes>
+                <filtering>false</filtering>
             </resource>
+            <!-- 不配置这个找不到url 因为是找不到application.yml文件的问题-->
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.yml</include>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+
+
 
             <resource>
                 <directory>src/main/webapp</directory>
-                <targetPath>META-INF/resources</targetPath>
+                <targetPath>resources</targetPath>
                 <includes>
                     <include>**/**</include>
                 </includes>
             </resource>
+
+<!--            <resource>-->
+<!--                <directory>src/main/</directory>-->
+<!--                <includes>-->
+<!--                    <include>**/*.xml</include>-->
+<!--                </includes>-->
+<!--            </resource>-->
+<!--            <resource>-->
+<!--                <directory>src/main/webapp</directory>-->
+<!--                <targetPath>META-INF/resources</targetPath>-->
+<!--                <includes>-->
+<!--                    <include>**/**</include>-->
+<!--                </includes>-->
+<!--            </resource>-->
 
         </resources>
 
